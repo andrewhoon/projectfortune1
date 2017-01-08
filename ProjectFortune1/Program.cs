@@ -10,6 +10,7 @@ namespace ProjectFortune1
     {
         static void Main(string[] args)
         {
+            //data collection up front.
             Console.WriteLine("Please enter your first name.");
             string firstName = (Console.ReadLine());
 
@@ -40,35 +41,113 @@ namespace ProjectFortune1
             Console.WriteLine("Please enter numerically how many siblings you have.");
             int siblings = int.Parse(Console.ReadLine());
 
+
+            //Beginning of what will be shown.
+            Console.Write(firstName + " " + lastName + " ");
+            //doing in "write" and not "writeline" in order to just make one total sentence.
+
+            //age even or odd
             if (age % 2 == 0)
             {
-                Console.WriteLine("You will retire in 25 years.");
+                Console.Write("will retire in 25 years");
             }
             else
             {
-                Console.WriteLine("You will retire in 17 years.");
+                Console.Write("will retire in 17 years");
             }
 
+
+
+            //monthBorn
+            if (monthBorn <= 0 || monthBorn >= 13)
+            {
+                Console.Write(" with $0.00 in the bank, ");
+            }
+            else if (monthBorn <= 4)
+            {
+                Console.Write(" with $2,000,000 in the bank, ");
+            }
+            else if (monthBorn <= 8)
+            {
+                Console.Write(" with $150,000 in the bank, ");
+            }
+            else
+            {
+                Console.Write(" with $1,000,000,000 in the bank, ");
+            }
+
+
+
+            //number of siblings
             if (siblings <= -1)
             {
-                Console.WriteLine("You will have a horrible vacation home near Heinz Field in Pittsburgh!");
+                Console.Write("a horrible vacation home near Heinz Field in Pittsburgh and a ");
             }
             else if (siblings == 1)
             {
-                Console.WriteLine("You will have a vacation home in the Outer Banks.");
+                Console.Write("a vacation home in the Outer Banks and a ");
             }
             else if (siblings == 2)
             {
-                Console.WriteLine("You will have a vacation home in Fiji.");
+                Console.Write("a vacation home in Fiji and a ");
             }
             else if (siblings == 3)
             {
-                Console.WriteLine("You will have a vacation home in Hawai\'i.");
+                Console.Write("a vacation home in Hawai\'i and a ");
             }
             else if (siblings >= 4)
             {
-                Console.WriteLine("You will have a vacation home in Key West.");
-            }       
+                Console.Write("a vacation home in Key West and a ");
+            }
+
+
+
+            //favColor for transportation
+            switch (favColor.ToUpper())
+            {
+                case "R":
+                    Console.WriteLine("boat.");
+                    break;
+                case "RED":
+                    Console.WriteLine("boat.");
+                    break;
+                case "O":
+                    Console.WriteLine("minivan.");
+                    break;
+                case "ORANGE":
+                    Console.WriteLine("minivan.");
+                    break;
+                case "Y":
+                    Console.WriteLine("yacht.");
+                    break;
+                case "YELLOW":
+                    Console.WriteLine("yacht.");
+                    break;
+                case "G":
+                    Console.WriteLine("private jet.");
+                    break;
+                case "GREEN":
+                    Console.WriteLine("private jet.");
+                    break;
+                case "B":
+                    Console.WriteLine("golf cart.");
+                    break;
+                case "BLUE":
+                    Console.WriteLine("golf cart.");
+                    break;
+                case "I":
+                    Console.WriteLine("motorcycle.");
+                    break;
+                case "INDIGO":
+                    Console.WriteLine("motorcycle.");
+                    break;
+                case "V":
+                    Console.WriteLine("RV.");
+                    break;
+                case "VIOLET":
+                    Console.WriteLine("RV.");
+                    break;
+            }
 
 
             }
