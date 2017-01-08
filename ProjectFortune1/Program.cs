@@ -39,6 +39,40 @@ namespace ProjectFortune1
 
             Console.WriteLine("Please enter numerically how many siblings you have.");
             int siblings = int.Parse(Console.ReadLine());
+
+            if (age % 2 == 0)
+            {
+                Console.WriteLine("You will retire in 25 years.");
+            }
+            else
+            {
+                Console.WriteLine("You will retire in 17 years.");
+            }
+
+            if (siblings <= -1)
+            {
+                Console.WriteLine("You will have a horrible vacation home near Heinz Field in Pittsburgh!");
+            }
+            else if (siblings == 1)
+            {
+                Console.WriteLine("You will have a vacation home in the Outer Banks.");
+            }
+            else if (siblings == 2)
+            {
+                Console.WriteLine("You will have a vacation home in Fiji.");
+            }
+            else if (siblings == 3)
+            {
+                Console.WriteLine("You will have a vacation home in Hawai\'i.");
+            }
+            else if (siblings >= 4)
+            {
+                Console.WriteLine("You will have a vacation home in Key West.");
+            }       
+
+
+            }
+
         }
     }
-}
+
