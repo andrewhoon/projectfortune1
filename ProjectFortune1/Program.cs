@@ -26,6 +26,7 @@ namespace ProjectFortune1
             Console.WriteLine("What is your favorite ROYGBIV Color? Enter \"Help\" if you are unsure what ROYGBIV is.");
             string roygbiv = (Console.ReadLine());
 
+            //Help option
             if (roygbiv.ToUpper() == "HELP")
             {
                 Console.WriteLine("R is Red \nO is Orange\nY is Yellow\nG is Green\nB is Blue\nI is Indigo\nV is Violet\nPlease enter your favorite ROYGBIV color.");
@@ -142,10 +143,10 @@ namespace ProjectFortune1
                     Console.WriteLine("motorcycle.");
                     break;
                 case "V":
-                    Console.WriteLine("RV.");
+                    Console.WriteLine("glider.");
                     break;
                 case "VIOLET":
-                    Console.WriteLine("RV.");
+                    Console.WriteLine("glider.");
                     break;
             }
 
