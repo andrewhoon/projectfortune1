@@ -30,14 +30,9 @@ namespace ProjectFortune1
             if (roygbiv.ToUpper() == "HELP")
             {
                 Console.WriteLine("R is Red \nO is Orange\nY is Yellow\nG is Green\nB is Blue\nI is Indigo\nV is Violet\nPlease enter your favorite ROYGBIV color.");
-
+                roygbiv = (Console.ReadLine());
             }
 
-            else
-            {
-                Console.WriteLine("Please re-enter your favorite ROYGBIV color.");
-            }
-            string favColor = (Console.ReadLine());
 
             Console.WriteLine("Please enter numerically how many siblings you have.");
             int siblings = int.Parse(Console.ReadLine());
@@ -104,7 +99,7 @@ namespace ProjectFortune1
 
 
             //favColor for transportation
-            switch (favColor.ToUpper())
+            switch (roygbiv.ToUpper())
             {
                 case "R":
                     Console.WriteLine("boat.");
@@ -148,6 +143,9 @@ namespace ProjectFortune1
                 case "VIOLET":
                     Console.WriteLine("glider.");
                     break;
+                default: Console.WriteLine("blimp.");
+                    break;
+
             }
 
 
